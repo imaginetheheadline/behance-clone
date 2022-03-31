@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;600&family=Poppins:ital,wght@0,900;1,600&family=Roboto:wght@300&display=swap");
+
+:root {
+    --black: rgb(18, 18, 18);
+    --light-gray: rgb(230, 230, 230);
+    --primary: rgb(12, 73, 230);
+    font-size: 18px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 200;
+    color: var(--black);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-block: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(94, 94, 94);
+}
+
+h1 {
+    font-size: 3em;
+    margin-block: 2em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-block: 1.5em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-block: 1.5em;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-block: 1em 0.5em;
+}
+
+h5 {
+    font-size: 1em;
+    margin-block: 0.5em;
+}
+
+h6 {
+    font-size: 0.8em;
+    margin-block: 0.5em;
+}
+
+a,
+button {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: baseline;
+}
+
+header .header-left {
+    flex-basis: 50%;
+    padding: 2em;
+}
+
+header .header-right {
+    flex-basis: 50%;
+    padding: 2em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .site-nav .logo {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+header .search {
+    padding: 1em 2em 2em;
+    flex-basis: 100%;
+    border-top: 1px solid var(--light-gray);
+}
+
+header .search input {
+    padding: 0.5em 2em;
+    border: 1px solid var(--light-gray);
+    font-size: 1.2em;
+    border-radius: 2.4em;
+    width: 100%;
+}
+
+header .user-nav {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+}
+
+header .user-nav a {
+    display: block;
+    padding: 0.4em 1em;
+    text-decoration: none;
+    font-weight: 200;
+    border: 1px solid var(--light-gray);
+    border-radius: 2em;
+    color: var(--black);
+    font-weight: 200;
+}
+
+header .user-nav a.primary {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: white;
+}
+
+.gallery {
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+}
+
+.card {
+    padding: 0.5em;
+    padding-block-end: 1em;
+    border: 1px solid transparent;
+    border-radius: 1em;
+    transition: 0.5s;
+}
+
+.card:hover {
+    cursor: pointer;
+    border-color: var(--light-gray);
+    transform: scale(1.05);
+    box-shadow: 0 0 1em #0002;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 0.5em;
+}
+
+.card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card .card-footer .title h4 {
+    margin-block: 1em 0.2em;
+}
+
+.card .card-footer .title h5 {
+    margin-block: 0.2em;
+}
+
+.card .card-footer .stats {
+    font-size: 0.8em;
+    display: flex;
+    gap: 0.5em;
+    min-width: 10em;
+}
+
+footer {
+    padding: 2em;
+    text-align: center;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal .modal-body {
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    grid-area: 1 / 1;
+    z-index: 11;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 4em;
+}
+
+.modal .modal-body img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal .modal-content {
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.modal .modal-content .close-button {
+    font-size: 1.2em;
+    font-family: "Roboto";
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(181, 181, 181);
+    background: none;
+    border: none;
+    padding: none;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.modal .modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000d;
+    backdrop-filter: blur(5px);
+    grid-area: 1 / 1;
+    z-index: 10;
+}
