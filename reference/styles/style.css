@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;600&family=Poppins:ital,wght@0,900;1,600&family=Roboto:wght@300&display=swap");
 
+/* Page setup */
 :root {
     --black: rgb(18, 18, 18);
     --light-gray: rgb(230, 230, 230);
@@ -14,6 +15,7 @@
     box-sizing: border-box;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -69,12 +71,14 @@ h6 {
     margin-block: 0.5em;
 }
 
+/* Buttons and links */
 a,
 button {
     font-family: "Roboto";
     font-weight: 300;
 }
 
+/* Header */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +140,7 @@ header .user-nav a.primary {
     color: white;
 }
 
+/* Main Gallery Content */
 .gallery {
     padding: 1.5em;
     display: grid;
@@ -184,11 +189,13 @@ header .user-nav a.primary {
     min-width: 10em;
 }
 
+/* Footer */
 footer {
     padding: 2em;
     text-align: center;
 }
 
+/* Modal */
 .modal {
     position: fixed;
     inset: 0;
