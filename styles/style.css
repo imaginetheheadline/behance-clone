@@ -145,8 +145,18 @@ header .user-nav a.primary {
 .gallery {
     padding: 1.5em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5em;
+}
+
+/* If min-width is 400px then */
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* If min-width is 600px then */
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
